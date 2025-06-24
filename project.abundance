@@ -5804,8 +5804,8 @@
                 {
                     "atomType": "Move",
                     "name": "Move",
-                    "x": 0.12783018867924528,
-                    "y": 0.7405940594059406,
+                    "x": 0.13160377358490566,
+                    "y": 0.7485148514851485,
                     "uniqueID": "4e3e8fab-290c-4f79-9c0c-0424f65915d0",
                     "ioValues": [
                         {
@@ -6040,6 +6040,36 @@
             ],
             "fileTypeVersion": 1,
             "compiledBom": []
+        },
+        {
+            "atomType": "Export",
+            "name": "Export",
+            "x": 0.28915094339622643,
+            "y": 0.6514851485148515,
+            "uniqueID": "d8ddbccb-1daf-4266-8803-0d32bc4bc156",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "887c8b5b-ae33-4501-a12f-4cc13d8342a8"
+                },
+                {
+                    "name": "Resolution (dpi)",
+                    "ioValue": 96
+                },
+                {
+                    "name": "Part Name",
+                    "ioValue": "M4_NewArmBase"
+                },
+                {
+                    "name": "File Type",
+                    "ioValue": "STEP"
+                }
+            ],
+            "description": "Export Atom, let's you choose a type of file to Export.",
+            "type": "STEP",
+            "resolution": 96,
+            "importIndex": 0,
+            "partName": "M4_NewArmBase"
         }
     ],
     "allConnectors": [
@@ -6049,6 +6079,13 @@
             "ap2Primary": false,
             "ap1ID": "887c8b5b-ae33-4501-a12f-4cc13d8342a8",
             "ap2ID": "60e082cd-e092-4537-93cd-1a9630ebc1aa"
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
+            "ap1ID": "887c8b5b-ae33-4501-a12f-4cc13d8342a8",
+            "ap2ID": "d8ddbccb-1daf-4266-8803-0d32bc4bc156"
         }
     ],
     "unitsKey": "MM",
