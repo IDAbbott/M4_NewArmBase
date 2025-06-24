@@ -5754,13 +5754,13 @@
                 {
                     "atomType": "Circle",
                     "name": "Circle",
-                    "x": 0.10943396226415095,
-                    "y": 0.5465346534653466,
+                    "x": 0.05047169811320755,
+                    "y": 0.5445544554455445,
                     "uniqueID": "1b23ecf7-8c7d-4b81-9cf7-71599c79fb3c",
                     "ioValues": [
                         {
                             "name": "diameter",
-                            "ioValue": 10
+                            "ioValue": 134
                         }
                     ],
                     "description": "Creates a new circle."
@@ -5768,16 +5768,144 @@
                 {
                     "atomType": "Circle",
                     "name": "Circle",
-                    "x": 0.10754716981132076,
-                    "y": 0.699009900990099,
+                    "x": 0.08679245283018867,
+                    "y": 0.6495049504950495,
                     "uniqueID": "55b96cee-d8ff-4d06-b2e9-364f3d6cc7e7",
                     "ioValues": [
                         {
                             "name": "diameter",
-                            "ioValue": 10
+                            "ioValue": 131
                         }
                     ],
                     "description": "Creates a new circle."
+                },
+                {
+                    "atomType": "Rectangle",
+                    "name": "Rectangle",
+                    "x": 0.057547169811320756,
+                    "y": 0.9148514851485149,
+                    "uniqueID": "60cb11b7-0484-4747-a8a1-366af2595093",
+                    "ioValues": [
+                        {
+                            "name": "x length",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "y length",
+                            "ioValue": 50
+                        }
+                    ],
+                    "description": "Creates a new rectangle."
+                },
+                {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.1669811320754717,
+                    "y": 0.9207920792079208,
+                    "uniqueID": "7271129b-25eb-4788-8bc6-4f11fc6f7285",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "60cb11b7-0484-4747-a8a1-366af2595093"
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": 62
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": 0
+                        }
+                    ],
+                    "description": "Moves a shape laterally in X, Y, Z."
+                },
+                {
+                    "atomType": "Rectangle",
+                    "name": "Rectangle",
+                    "x": 0.035849056603773584,
+                    "y": 0.7148514851485148,
+                    "uniqueID": "d3e88255-4b51-422c-8eff-fac2bbfa332e",
+                    "ioValues": [
+                        {
+                            "name": "x length",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "y length",
+                            "ioValue": 20
+                        }
+                    ],
+                    "description": "Creates a new rectangle."
+                },
+                {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.12783018867924528,
+                    "y": 0.7405940594059406,
+                    "uniqueID": "4e3e8fab-290c-4f79-9c0c-0424f65915d0",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "d3e88255-4b51-422c-8eff-fac2bbfa332e"
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": -64
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": 0
+                        }
+                    ],
+                    "description": "Moves a shape laterally in X, Y, Z."
+                },
+                {
+                    "atomType": "Assembly",
+                    "name": "Assembly",
+                    "x": 0.20754716981132074,
+                    "y": 0.6930693069306931,
+                    "uniqueID": "c1a8c41b-6297-4523-936a-1b1c3fa8646c",
+                    "ioValues": [
+                        {
+                            "name": "Shape 1",
+                            "ioValue": "55b96cee-d8ff-4d06-b2e9-364f3d6cc7e7"
+                        },
+                        {
+                            "name": "Shape 2",
+                            "ioValue": "4e3e8fab-290c-4f79-9c0c-0424f65915d0"
+                        },
+                        {
+                            "name": "Shape 3",
+                            "ioValue": "7271129b-25eb-4788-8bc6-4f11fc6f7285"
+                        }
+                    ],
+                    "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
+                },
+                {
+                    "atomType": "Difference",
+                    "name": "Difference",
+                    "x": 0.26037735849056604,
+                    "y": 0.5405940594059405,
+                    "uniqueID": "b9bfd7df-5475-456a-8e3e-cd00ecbc18b7",
+                    "ioValues": [
+                        {
+                            "name": "geometry1",
+                            "ioValue": "1b23ecf7-8c7d-4b81-9cf7-71599c79fb3c"
+                        },
+                        {
+                            "name": "geometry2",
+                            "ioValue": "c1a8c41b-6297-4523-936a-1b1c3fa8646c"
+                        }
+                    ],
+                    "description": "Subtracts shape two from shape one."
                 }
             ],
             "allConnectors": [
@@ -5885,6 +6013,55 @@
                     "ap2Primary": false,
                     "ap1ID": "ff5b9208-eb14-4beb-9246-8aebb58e5616",
                     "ap2ID": "125f1fda-8a8b-4fac-bc55-a798fa993015"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry1",
+                    "ap2Primary": false,
+                    "ap1ID": "1b23ecf7-8c7d-4b81-9cf7-71599c79fb3c",
+                    "ap2ID": "b9bfd7df-5475-456a-8e3e-cd00ecbc18b7"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 1",
+                    "ap2Primary": false,
+                    "ap1ID": "55b96cee-d8ff-4d06-b2e9-364f3d6cc7e7",
+                    "ap2ID": "c1a8c41b-6297-4523-936a-1b1c3fa8646c"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "60cb11b7-0484-4747-a8a1-366af2595093",
+                    "ap2ID": "7271129b-25eb-4788-8bc6-4f11fc6f7285"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 3",
+                    "ap2Primary": false,
+                    "ap1ID": "7271129b-25eb-4788-8bc6-4f11fc6f7285",
+                    "ap2ID": "c1a8c41b-6297-4523-936a-1b1c3fa8646c"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "d3e88255-4b51-422c-8eff-fac2bbfa332e",
+                    "ap2ID": "4e3e8fab-290c-4f79-9c0c-0424f65915d0"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 2",
+                    "ap2Primary": false,
+                    "ap1ID": "4e3e8fab-290c-4f79-9c0c-0424f65915d0",
+                    "ap2ID": "c1a8c41b-6297-4523-936a-1b1c3fa8646c"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry2",
+                    "ap2Primary": false,
+                    "ap1ID": "c1a8c41b-6297-4523-936a-1b1c3fa8646c",
+                    "ap2ID": "b9bfd7df-5475-456a-8e3e-cd00ecbc18b7"
                 }
             ],
             "fileTypeVersion": 1,
